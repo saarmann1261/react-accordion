@@ -2,11 +2,12 @@ import React, { useState } from "react";
 
 function FormValidation() {
   // Initial form state
-  const [formData, setFormData] = useState({
+  const initialState = {
     name: "",
     email: "",
     password: ""
-  });
+  }
+  const [formData, setFormData] = useState(initialState);
 
   // To store validation errors
   const [errors, setErrors] = useState({});
@@ -50,6 +51,7 @@ function FormValidation() {
 
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form submitted successfully:", formData);
+      setFormData(initialState)
       // Further actions here (e.g., API call)
     }
   };
