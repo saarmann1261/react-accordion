@@ -1,12 +1,50 @@
-# React + Vite
+# React Accordion and Form Validation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project contains two components built with React:
 
-Currently, two official plugins are available:
+1. **Accordion** – A collapsible section UI that supports both single and multiple item expansion.
+2. **Form Validation** – A registration form with client-side input validation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Both components are styled using **Tailwind CSS**.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Accordion Component
+
+### Features:
+- Shows a list of collapsible sections.
+- You can allow one or multiple sections to be expanded at the same time.
+- Uses simple `useState` logic for toggling.
+
+### How it works:
+- A state variable `select` stores which section(s) are open (by index).
+- If multiple mode is on, multiple indexes can be stored.
+- Clicking a section title updates the `select` state.
+- The `multiple` state determines whether one or many sections can be open.
+
+
+# React Form Validation Component
+
+This is a simple React component for handling user **registration form validation**. It includes fields for name, email, and password with client-side validation logic and clear error messages.
+
+---
+
+## Features
+
+✅ Real-time form state using React's `useState`  
+✅ Input validation on form submission  
+✅ Inline error messages  
+✅ Regex-based email check  
+✅ Password length enforcement  
+✅ Tailwind CSS styling for clean UI
+
+---
+
+## Validation Rules
+
+- **Name**: Must not be empty.
+- **Email**: Must be in a valid email format (e.g. `name@example.com`).
+- **Password**: Must be at least 6 characters long.
+
+---
+
